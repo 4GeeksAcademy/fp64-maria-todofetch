@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.background {
+    background: linear-gradient(135deg, #ffffff, hsla(270, 50%, 50%, 0.8));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.task-list-container {
+    max-width: 600px; 
+    padding: 20px;
+  }
+.task-list {
+    background-color: hsla(0, 0%, 96%, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+.agregar{
+    transform: translate(10px, 0);
+    background:  #6c8dff;
+}
+
+.eliminar {
+    background: #cf2b2be7;
+}
+
+.task-counter {
+    font-size: small;
+}
