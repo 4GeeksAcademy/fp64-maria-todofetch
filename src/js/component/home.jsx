@@ -14,7 +14,7 @@ function Home() {
                 setListaOriginal(data.todos);
                 setListaFiltrada(data.todos);
             })
-            .catch(error => console.error('LA HAS LIADO POR:', error));
+            .catch(error => console.error('Error:', error));
     }, []);
 
     const actualizarListas = (nuevaLista) => {
@@ -37,7 +37,7 @@ function Home() {
         })
         .then(response => {
             if (!response.ok) {
-                throw new Error('LA HAS LIADO POR: ' + response.statusText);
+                throw new Error('Error: ' + response.statusText);
             }
             return response.json();
         })
@@ -49,7 +49,7 @@ function Home() {
             }
         })
         .catch(error => {
-            console.error('LA HAS LIADO POR:', error);
+            console.error('Error:', error);
         });
     
         setTextoNuevo(''); 
@@ -66,7 +66,7 @@ function Home() {
             nuevaLista.splice(index, 1);
             actualizarListas(nuevaLista);
         })
-        .catch(error => console.error('LA HAS LIADO POR:', error));
+        .catch(error => console.error('Error:', error));
     };
 
     const limpiarTareas = () => {
@@ -76,7 +76,7 @@ function Home() {
         .then(() => {
             actualizarListas([]);
         })
-        .catch(error => console.error('LA HAS LIADO POR:', error));
+        .catch(error => console.error('Error:', error));
     };
 
     const filtrarTareas = (event) => {
@@ -93,7 +93,7 @@ function Home() {
     };
 
     const actualizarTextoNuevo = (event) => {
-        setTextoNuevo(event.target.value); 
+        setTextoNuevo(event.target.value);
     };
     
     return (
